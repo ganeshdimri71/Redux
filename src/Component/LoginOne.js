@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { login } from "../Features/user";
 import { logout } from "../Features/user";
 import { batch } from 'react-redux'
-import { changeColor } from '../Features/theme'
+import { changeColor, changeBackgroundColor } from '../Features/theme'
 import { profileDisplayerFunction } from '../Features/user'
 
 function LoginOne ( props ) {
@@ -130,13 +130,9 @@ function LoginOne ( props ) {
                     </select>
                 </div>
                 <div className="loginOne">
-                    <b style={ { alignSelf: 'flex-end', minWidth: '11rem' } }>Color:</b>
+                    <b style={ { alignSelf: 'flex-end', minWidth: '17rem' } }>Color:</b>
                     <select name="ddl" onChange={ ( e ) => setColor( e.target.value ) }>
-                        <option value='blue'>Blue</option>
-                        <option value='green'>Green</option>
-                        <option value='red'>Red</option>
-                        <option value='yellow'>Yelllow</option>
-                        <option value='' selected>Select a Color </option>
+                        <option value='black'>Black</option>
                         <option value='white'>White</option>
                     </select>
                 </div>
@@ -186,13 +182,16 @@ function LoginOne ( props ) {
                     </select>
                 </div>
                 <div className="loginOne">
-                    <b style={ { alignSelf: 'flex-end', minWidth: '11rem' } }>Color:</b>
+                    <b style={ { alignSelf: 'flex-end', minWidth: '17rem' } }>Color:</b>
                     <select name="ddl" onChange={ ( e ) => setColorOne( e.target.value ) }>
-                        <option value='blue'>Blue</option>
-                        <option value='green'>Green</option>
-                        <option value='red'>Red</option>
-                        <option value='yellow'>Yelllow</option>
-                        <option value='' selected>Select a Color </option>
+                        <option value='black'>Black</option>
+                        <option value='white'>White</option>
+                    </select>
+                </div>
+                <div className="loginOne">
+                    <b style={ { alignSelf: 'flex-end', minWidth: '14rem' } }>Background:</b>
+                    <select name="ddl" onChange={ ( e ) => setbackgroundOne( e.target.value ) }>
+                        <option value='black'>Black</option>
                         <option value='white'>White</option>
                     </select>
                 </div>
@@ -235,13 +234,16 @@ function LoginOne ( props ) {
                     </select>
                 </div>
                 <div className="loginOne">
-                    <b style={ { alignSelf: 'flex-end', minWidth: '11rem' } }>Color:</b>
+                    <b style={ { alignSelf: 'flex-end', minWidth: '17rem' } }>Color:</b>
                     <select name="ddl" onChange={ ( e ) => setColorTwo( e.target.value ) }>
-                        <option value='blue'>Blue</option>
-                        <option value='green'>Green</option>
-                        <option value='red'>Red</option>
-                        <option value='yellow'>Yelllow</option>
-                        <option value='' selected>Select a Color </option>
+                        <option value='black'>Black</option>
+                        <option value='white'>White</option>
+                    </select>
+                </div>
+                <div className="loginOne">
+                    <b style={ { alignSelf: 'flex-end', minWidth: '14rem' } }>Background:</b>
+                    <select name="ddl" onChange={ ( e ) => setbackgroundTwo( e.target.value ) }>
+                        <option value='black'>Black</option>
                         <option value='white'>White</option>
                     </select>
                 </div>
@@ -284,13 +286,16 @@ function LoginOne ( props ) {
                     </select>
                 </div>
                 <div className="loginOne">
-                    <b style={ { alignSelf: 'flex-end', minWidth: '11rem' } }>Color:</b>
+                    <b style={ { alignSelf: 'flex-end', minWidth: '17rem' } }>Color:</b>
                     <select name="ddl" onChange={ ( e ) => setColorThree( e.target.value ) }>
-                        <option value='blue'>Blue</option>
-                        <option value='green'>Green</option>
-                        <option value='red'>Red</option>
-                        <option value='yellow'>Yelllow</option>
-                        <option value='' selected>Select a Color </option>
+                        <option value='black'>Black</option>
+                        <option value='white'>White</option>
+                    </select>
+                </div>
+                <div className="loginOne">
+                    <b style={ { alignSelf: 'flex-end', minWidth: '14rem' } }>Background:</b>
+                    <select name="ddl" onChange={ ( e ) => setbackgroundThree( e.target.value ) }>
+                        <option value='black'>Black</option>
                         <option value='white'>White</option>
                     </select>
                 </div>
@@ -333,13 +338,16 @@ function LoginOne ( props ) {
                     </select>
                 </div>
                 <div className="loginOne">
-                    <b style={ { alignSelf: 'flex-end', minWidth: '11rem' } }>Color:</b>
+                    <b style={ { alignSelf: 'flex-end', minWidth: '17rem' } }>Color:</b>
                     <select name="ddl" onChange={ ( e ) => setColorFour( e.target.value ) }>
-                        <option value='blue'>Blue</option>
-                        <option value='green'>Green</option>
-                        <option value='red'>Red</option>
-                        <option value='yellow'>Yelllow</option>
-                        <option value='' selected>Select a Color </option>
+                        <option value='black'>Black</option>
+                        <option value='white'>White</option>
+                    </select>
+                </div>
+                <div className="loginOne">
+                    <b style={ { alignSelf: 'flex-end', minWidth: '14rem' } }>Background:</b>
+                    <select name="ddl" onChange={ ( e ) => setbackgroundFour( e.target.value ) }>
+                        <option value='black'>Black</option>
                         <option value='white'>White</option>
                     </select>
                 </div>
@@ -394,6 +402,11 @@ function LoginOne ( props ) {
                     dispatch( changeColor( { color: colorTwo, value: 3 } ) )
                     dispatch( changeColor( { color: colorThree, value: 4 } ) )
                     dispatch( changeColor( { color: colorFour, value: 5 } ) )
+                    dispatch( changeColor( { bgcolor: background, value: 1 } ) )
+                    dispatch( changeColor( { bgcolor: backgroundOne, value: 2 } ) )
+                    dispatch( changeColor( { bgcolor: backgroundTwo, value: 3 } ) )
+                    dispatch( changeColor( { bgcolor: backgroundThree, value: 4 } ) )
+                    dispatch( changeColor( { bgcolor: backgroundFour, value: 5 } ) )
                 }
                 )
                 }

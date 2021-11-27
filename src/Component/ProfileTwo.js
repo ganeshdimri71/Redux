@@ -8,8 +8,9 @@ function ProfileTwo () {
 
     const user = useSelector( ( state ) => state.user.valueTwo )
     const themeColor = useSelector( ( state ) => state.theme.valueTwo );
+    const backgroundColor = useSelector( ( state ) => state.theme.valueSeven );
     return (
-        <div className="profiles" style={ { color: themeColor } }>
+        <div className="profiles" style={ { color: themeColor, backgroundColor: backgroundColor } }>
             <h1>Employee 3</h1>
             <p>Name: { user.name } </p>
             <p>Age: { user.age }</p>

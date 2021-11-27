@@ -36,8 +36,8 @@
 }
 
 .profiles{
+  background-color: rgb(192, 189, 189);
   margin: 2rem;
-  background-color: #edebeb;
   padding: 5vw;
   text-align: center;
   min-width:15rem;

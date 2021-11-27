@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 
-const initialStateValue = "black";
+const initialStateValue = "";
 export const themeSlice = createSlice( {
 
 	name: "theme",
@@ -11,6 +11,11 @@ export const themeSlice = createSlice( {
 		valueTwo: initialStateValue,
 		valueThree: initialStateValue,
 		valueFour: initialStateValue,
+		valueFive: initialStateValue,
+		valueSix: initialStateValue,
+		valueSeven: initialStateValue,
+		valueEight: initialStateValue,
+		valueNine: initialStateValue,
 	},
 	reducers: {
 		changeColor: ( state, action ) => {
@@ -21,12 +26,20 @@ export const themeSlice = createSlice( {
 			if ( action.payload.value == 4 ) state.valueThree = action.payload.color;
 			if ( action.payload.value == 5 ) state.valueFour = action.payload.color;
 		},
+		changeBackgroundColor: ( state, action ) => {
+			console.log( action )
+			if ( action.payload.value == 1 ) state.valueFive = action.payload.bgcolor;
+			if ( action.payload.value == 2 ) state.valueSix = action.payload.bgcolor;
+			if ( action.payload.value == 3 ) state.valueSeven = action.payload.bgcolor;
+			if ( action.payload.value == 4 ) state.valueEight = action.payload.bgcolor;
+			if ( action.payload.value == 5 ) state.valueNine = action.payload.bgcolor;
+		},
 
 	},
 } );
 
 
-export const { changeColor } = themeSlice.actions;
+export const { changeColor, changeBackgroundColor } = themeSlice.actions;
 
 export default themeSlice.reducer;
 
