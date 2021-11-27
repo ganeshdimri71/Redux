@@ -28,6 +28,51 @@
   color: #61dafb;
 }
 
+.ProfileRenerer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color:white;
+}
+
+.profiles{
+  margin: 2rem;
+  background-color: #edebeb;
+  padding: 5vw;
+  text-align: center;
+  min-width:15rem;
+}
+
+.profilesManagement{
+   text-align: center;
+   align-self: center;
+}
+
+.inputColor{
+  border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.login{
+  width:14rem;
+  display:flex;
+  flex-direction:column;
+  
+}
+
+.loginOne{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  margin-bottom: 1rem
+}
+
+.inputOne {
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

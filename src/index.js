@@ -3,12 +3,27 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { configureStore } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+import userReducer from './Features/user'
+import themeReducer from './Features/theme'
+import mouseReducer from './Features/mouse'
+
+const store = configureStore({
+	reducer: {
+		user: userReducer,
+		theme: themeReducer,
+		mouse: mouseReducer,
+	},
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Provider store={store}>
+			<App />
+		</Provider>
+	</React.StrictMode>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
